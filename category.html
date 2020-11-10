@@ -18,6 +18,12 @@
     color:black;
     text-decoration: none;
   }
+  #active{
+    font-weight: bold;
+  }
+  .saw{
+    color: gray;
+  }
   h1{
     font-size: 45px;
     text-align: center;
@@ -28,13 +34,36 @@
 <body>
   <h1><a href="index.html">Good Dog, 굿독 : 구독추천플랫폼</a></h1>
   <ol>
-    <li><a href="home.html">HOME</a></li>
-    <li><a href="category.html" style="color:blue;font-weight: bold;">CATEGORY</a></li>
-    <li><a href="mypage.html">MY PAGE</a></li>
+    <li><a href="home.html" class="saw">HOME</a></li>
+    <li><a href="category.html" id="active">CATEGORY</a></li>
+    <li><a href="mypage.html" class="saw">MY PAGE</a></li>
   </ol>
   <!--h1은 한 페이지당 하나씩 쓴다 -->
 
   <h2><a href="settings.html">CATEGORY</a></h2>
+  <p>
+    <!-- 채팅기능 -->
+    <p>  <div id="disqus_thread"></div>
+    <script>
 
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://gooddogchat.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></p>
+
+  </p>
 </body>
 </html>

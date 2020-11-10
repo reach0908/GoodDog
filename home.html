@@ -18,6 +18,12 @@
     color:black;
     text-decoration: none;
   }
+  .saw{
+    color: gray;
+  }
+  #active{
+    font-weight: bold;
+  }
   h1{
     font-size: 45px;
     text-align: center;
@@ -27,35 +33,15 @@
 <!-- 본문 -->
 <body>
   <h1><a href="index.html">Good Dog, 굿독 : 구독추천플랫폼</a></h1>
+  <!-- 웹의 리스트 -->
   <ol>
-    <li><a href="home.html" style="color:blue;font-weight: bold;">HOME</a></li>
-    <li><a href="category.html">CATEGORY</a></li>
-    <li><a href="mypage.html">MY PAGE</a></li>
+    <!--태그선택자 < 클래스 선택자 < ID 선택-->
+    <!-- 동일한 선택자에서는 제일 마지막에 나온놈이 우선순위가 높다 -->
+    <li><a href="home.html" id="active">HOME</a></li>
+    <li><a href="category.html" class="saw">CATEGORY</a></li>
+    <li><a href="mypage.html" class="saw">MY PAGE</a></li>
   </ol>
   <!--h1은 한 페이지당 하나씩 쓴다 -->
   <h2><a href="home.html">HOME</a></h2>
-<p>  <div id="disqus_thread"></div>
-<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://gooddogchat.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></p>
-
-
-
 </body>
 </html>
