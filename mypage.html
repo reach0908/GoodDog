@@ -1,54 +1,68 @@
 <!doctype html>
 <html>
 <!-- 본문의 설명 -->
+
 <head>
   <title>굿독 - MY PAGE</title>
   <meta charset="utf-8">
   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3K60QQ3HJ6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3K60QQ3HJ6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-3K60QQ3HJ6');
-</script>
-<style>
-body{
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-}
-a{
-  color:black;
-  text-decoration: none;
-}
-h1{
-  font-size:45px;
-   text-align: center;
+    gtag('config', 'G-3K60QQ3HJ6');
+  </script>
+  <style>
+    body {}
 
-   margin:0;
-   padding:20px;
-}
-ol{
+    a {
+      color: black;
+      text-decoration: none;
+    }
+    h1 {
+      font-size: 45px;
+      text-align: center;
 
-  width:100px;
-  margin:0;
-  padding:20px;
-}
-#grid{
-  display:grid;
-  border: 2px solid gray;
-  grid-template-columns: 150px 1fr;
-}
-#grid #ol{
-  border-right:2px solid gray;
-  padding-left:33px;
-}
-#grid #article{
-  padding-left:25px;
-}
-</style>
+      margin: 0;
+      padding: 20px;
+    }
+    ol {
+      width: 100px;
+      margin: 0;
+      padding: 20px;
+    }
+
+    #grid {
+      display: grid;
+      border: 2px solid gray;
+      grid-template-columns: 150px 1fr;
+    }
+    #grid #ol {
+      padding-left: 33px;
+
+    }
+    #grid #article {
+      border-left: 2px solid gray;
+      padding-left: 25px;
+    }
+    @media(max-width:483px) {
+      #grid{
+        display: block;
+      }
+      #grid #article{
+        border-left: none;
+        border-top: 2px solid gray;
+      }
+    }
+  </style>
 </head>
 <!-- 본문 -->
+
 <body>
 
   <!--h1은 한 페이지당 하나씩 쓴다 -->
@@ -69,20 +83,23 @@ ol{
     </div>
   </div>
 
-    <!--관리자 상담기능 -->
-    <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/5faa8ee60a68960861bd8f5a/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+  <!--관리자 상담기능 -->
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {},
+      Tawk_LoadStart = new Date();
+    (function() {
+      var s1 = document.createElement("script"),
+        s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/5faa8ee60a68960861bd8f5a/default';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
   </p>
 </body>
+
 </html>

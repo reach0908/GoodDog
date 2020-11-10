@@ -1,54 +1,66 @@
 <!doctype html>
 <html>
 <!-- 본문의 설명 -->
+
 <head>
   <title>굿독 - CATEGORY</title>
   <meta charset="utf-8">
   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3K60QQ3HJ6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3K60QQ3HJ6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-3K60QQ3HJ6');
+  </script>
+  <style>
+    body {}
 
-  gtag('config', 'G-3K60QQ3HJ6');
-</script>
-<style>
-body{
+    a {
+      color: black;
+      text-decoration: none;
+    }
+    h1 {
+      font-size: 45px;
+      text-align: center;
 
-}
-a{
-  color:black;
-  text-decoration: none;
-}
-h1{
-  font-size:45px;
-   text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+    ol {
+      width: 100px;
+      margin: 0;
+      padding: 20px;
+    }
 
-   margin:0;
-   padding:20px;
-}
-ol{
+    #grid {
+      display: grid;
+      border: 2px solid gray;
+      grid-template-columns: 150px 1fr;
+    }
+    #grid #ol {
+      padding-left: 33px;
 
-  width:100px;
-  margin:0;
-  padding:20px;
-}
-#grid{
-  display:grid;
-  border: 2px solid gray;
-  grid-template-columns: 150px 1fr;
-}
-#grid #ol{
-  border-right:2px solid gray;
-  padding-left:33px;
-}
-#grid #article{
-  padding-left:25px;
-}
-</style>
+    }
+    #grid #article {
+      border-left: 2px solid gray;
+      padding-left: 25px;
+    }
+    @media(max-width:483px) {
+      #grid{
+        display: block;
+      }
+      #grid #article{
+        border-left: none;
+        border-top: 2px solid gray;
+      }
+    }
+  </style>
 </head>
 <!-- 본문 -->
+
 <body>
   <h1><a href="index.html">Good Dog, 굿독 : 구독추천플랫폼</a></h1>
   <div id="grid">
@@ -67,12 +79,12 @@ ol{
       <h2><a href="settings.html">CATEGORY</a></h2>
       <p>
         <!-- 채팅기능 -->
-        <p>  <div id="disqus_thread"></div>
-        <script>
-
+      <p>
+      <div id="disqus_thread"></div>
+      <script>
         /**
-        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
         /*
         var disqus_config = function () {
         this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
@@ -80,16 +92,17 @@ ol{
         };
         */
         (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://gooddogchat.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
+          var d = document,
+            s = d.createElement('script');
+          s.src = 'https://gooddogchat.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
         })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></p>
-
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></p>
       </p>
     </div>
   </div>
 </body>
+
 </html>
