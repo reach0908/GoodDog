@@ -9,38 +9,40 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3K60QQ3HJ6"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
     function gtag() {
       dataLayer.push(arguments);
     }
     gtag('js', new Date());
-
     gtag('config', 'G-3K60QQ3HJ6');
+    var Grid = {
+      setColor:function(color){
+        document.querySelector('#grid').style.color=color;
+      },
+      setBgColor:function(color){
+        document.querySelector('#grid').style.backgroundColor=color;
+      }
+    }
+    var Links = {
+      setColor:function(color){
+        var links = document.querySelectorAll('a');
+        var i=0;
+        while(i<links.length){
+          links[i].style.color = color;
+          i=i+1;
+        }
+      }
+    }
     function darkmodeHandler(self){
-      var target = document.querySelector('#grid');
-
       if(self.value==='다크모드ON'){
-        target.style.backgroundColor='white';
-        target.style.color='black'
-        document.querySelector('#active, #aTitle').style.color='black'
-        self.value='다크모드OFF'
-        var links = document.querySelectorAll('a');
-        var i=0;
-        while(i<links.length){
-          links[i].style.color = 'black';
-          i=i+1;
-        }
+        Grid.setBgColor('white');
+        Grid.setColor('black');
+        self.value='다크모드OFF';
+        Links.setColor('black');
       }else{
-        target.style.backgroundColor='black';
-        target.style.color='white'
-        document.querySelector('#active, #aTitle').style.color='white'
-        self.value='다크모드ON'
-        var links = document.querySelectorAll('a');
-        var i=0;
-        while(i<links.length){
-          links[i].style.color = 'white';
-          i=i+1;
-        }
+        Grid.setBgColor('black');
+        Grid.setColor('white');
+        self.value='다크모드ON';
+        Links.setColor('white');
       }
     }
   </script>
@@ -48,8 +50,8 @@
 </head>
 <!-- 본문 -->
 
-<body>
-  <div id="bgImage">
+<body id="bgImage">
+  <div >
     <!--h1은 한 페이지당 하나씩 쓴다 -->
     <h1><a href="index.html">Good Dog, 굿독 : 구독추천플랫폼</a></h1>
     <div id="grid">
@@ -66,7 +68,6 @@
         <h2><a href="mypage.html" id="aTitle">MY PAGE</a></h2>
         <h3>다크모드</h3>
         <p>
-
           <input type="button" value="다크모드OFF" onclick="
             darkmodeHandler(this);
           ">
