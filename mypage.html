@@ -16,6 +16,33 @@
     gtag('js', new Date());
 
     gtag('config', 'G-3K60QQ3HJ6');
+    function darkmodeHandler(self){
+      var target = document.querySelector('#grid');
+
+      if(self.value==='다크모드ON'){
+        target.style.backgroundColor='white';
+        target.style.color='black'
+        document.querySelector('#active, #aTitle').style.color='black'
+        self.value='다크모드OFF'
+        var links = document.querySelectorAll('a');
+        var i=0;
+        while(i<links.length){
+          links[i].style.color = 'black';
+          i=i+1;
+        }
+      }else{
+        target.style.backgroundColor='black';
+        target.style.color='white'
+        document.querySelector('#active, #aTitle').style.color='white'
+        self.value='다크모드ON'
+        var links = document.querySelectorAll('a');
+        var i=0;
+        while(i<links.length){
+          links[i].style.color = 'white';
+          i=i+1;
+        }
+      }
+    }
   </script>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -39,15 +66,9 @@
         <h2><a href="mypage.html" id="aTitle">MY PAGE</a></h2>
         <h3>다크모드</h3>
         <p>
-          <input type="button" name="night" value="다크모드ON" onclick="
-          document.querySelector('#grid').style.backgroundColor='black';
-          document.querySelector('#grid').style.color='white'
-          document.querySelector('#active, #aTitle').style.color='white'
-          ">
-          <input type="button" name="day" value="다크모드OFF" onclick="
-          document.querySelector('#grid').style.backgroundColor='white';
-          document.querySelector('#grid').style.color='black'
-          document.querySelector('#active, #aTitle').style.color='black'
+
+          <input type="button" value="다크모드OFF" onclick="
+            darkmodeHandler(this);
           ">
         </p>
       </div>
