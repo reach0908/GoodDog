@@ -1,4 +1,6 @@
-body {}
+body {
+
+}
 
 a {
   color: black;
@@ -6,6 +8,7 @@ a {
 }
 
 h1 {
+  color: white;
   font-size: 45px;
   text-align: center;
   margin: 0;
@@ -17,21 +20,29 @@ ol {
   margin: 0;
   padding: 20px;
 }
-.saw{
+
+.saw {
   color: gray;
 }
-#active{
+#bgImage{
+  background-image: url("coding1.jpg");
+  background-position: center;
+  background-size: cover;
+}
+#active {
   font-weight: bold;
 }
 
 #grid {
   display: grid;
+  background-color: white;
+  color: black;
   border: 2px solid gray;
   grid-template-columns: 150px 1fr;
 }
 
 #grid #ol {
-  padding-left: 33px;
+  padding-left: 20px;
 }
 
 #grid #article {
@@ -43,11 +54,8 @@ ol {
   #grid {
     display: block;
   }
-
   #grid #article {
     border-left: none;
     border-top: 2px solid gray;
   }
-
-
 }
