@@ -1,5 +1,7 @@
 package paastaproj.func1spring.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import paastaproj.func1spring.domain.Member;
 import paastaproj.func1spring.repositories.MeberRepository;
 import paastaproj.func1spring.repositories.MemoryMemberRepository;
@@ -7,9 +9,16 @@ import paastaproj.func1spring.repositories.MemoryMemberRepository;
 import java.util.List;
 import java.util.Optional;
 
+
+//@Service
 public class MemberService {
 
-    private final MeberRepository meberRepository = new MemoryMemberRepository();
+    private final MeberRepository meberRepository;
+
+    //@Autowired
+   public MemberService(MeberRepository meberRepository) {
+        this.meberRepository = meberRepository;
+    }
 
     /*
      *회원가입

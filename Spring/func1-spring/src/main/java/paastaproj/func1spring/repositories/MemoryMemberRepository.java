@@ -1,9 +1,11 @@
 package paastaproj.func1spring.repositories;
 
+import org.springframework.stereotype.Repository;
 import paastaproj.func1spring.domain.Member;
 
 import java.util.*;
 
+//@Repository
 public class MemoryMemberRepository implements MeberRepository {
 
     private static Map<Long, Member> store = new HashMap<>();
