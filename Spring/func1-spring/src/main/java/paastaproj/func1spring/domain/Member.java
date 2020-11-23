@@ -3,6 +3,8 @@ package paastaproj.func1spring.domain;
 public class Member {
     private Long id;
     private String name;
+    private Long Latitude;
+    private Long Longitude;
 
     public Long getId() {
         return id;
