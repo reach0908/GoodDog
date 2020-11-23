@@ -1,10 +1,11 @@
 package paastaproj.func1spring.domain;
 
+import java.util.List;
+
 public class Member {
     private Long id;
     private String name;
-    private Long Latitude;
-    private Long Longitude;
+    private List<String> locations;
 
     public Long getId() {
         return id;
@@ -21,4 +22,5 @@ public class Member {
     public void setName(String name) {
         this.name = name;
     }
+
 }

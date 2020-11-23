@@ -13,9 +13,7 @@ import java.util.List;
 
 @Controller
 public class MemberController {
-
     private final MemberService memberService;
-
     //컴포넌트 스캔방식의 DI , 그 중에서도 생성자 주입입
    //@Autowired
     public MemberController(MemberService memberService){
@@ -33,12 +31,9 @@ public class MemberController {
     public String create(MemberForm form){
         Member member = new Member();
         member.setName(form.getName());
-
         memberService.join(member);
-
         return "redirect:/";
     }
-
 
     //회원목록 누를시
     @GetMapping("/members")

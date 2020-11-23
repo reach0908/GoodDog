@@ -28,11 +28,11 @@ public class MemberService {
         //1. 중복회원이 있으면 안된다.
         //null일 가능성이 있으면 optional 로 감싸는걸 추천한다.
         validateDuplicateMember(member);
-
         meberRepository.save(member);
         return member.getId();
     }
 
+    //중복검사
     private void validateDuplicateMember(Member member) {
         meberRepository.findByName(member.getName())
                 .ifPresent(m->{
@@ -48,5 +48,4 @@ public class MemberService {
     public Optional<Member> findOne(Long memberId){
         return meberRepository.findById(memberId);
     }
-
 }

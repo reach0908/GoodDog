@@ -37,6 +37,8 @@ public class MemoryMemberRepository implements MeberRepository {
 
     public void clearStore(){
         store.clear();
-
     }
+
+
+
 }
