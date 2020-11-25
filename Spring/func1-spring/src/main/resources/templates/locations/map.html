@@ -11,15 +11,23 @@
 <div class="container">
     <script th:inline="javascript">
     var polylinePath = new Array();
+    var markerArr = new Array();
+
     /*<![CDATA[*/
 
 	/*[# th:each="location : ${locations}"]*/
-	save(/*[[${location.Latitude}]]*/,/*[[${location.Longitude}]]*/);
+	savePath(/*[[${location.Latitude}]]*/,/*[[${location.Longitude}]]*/);
+	/*[/]*/
+	/*[# th:each="mark : ${myloca}"]*/
+	saveMarker(/*[[${mark.Latitude}]]*/,/*[[${mark.Longitude}]]*/);
 	/*[/]*/
 	/*]]>*/
 
-    function save(latitude,longitude){
+    function savePath(latitude,longitude){
         polylinePath.push(new naver.maps.LatLng(latitude,longitude));
+    }
+    function saveMarker(latitude,longitude){
+        markerArr.push(new naver.maps.LatLng(latitude,longitude));
     }
 </script>
 
@@ -40,7 +48,19 @@ var map = new naver.maps.Map('map', mapOptions);
 		map : map
 	});
 
+var marker = new naver.maps.Marker({
+    position: markerArr[0],
+    map: map
+});
 
+
+
+for(var i=0;i<markerArr.length;i++){
+    var marker = new naver.maps.Marker({
+        position: markerArr[i],
+        map: map
+    });
+}
 
 </script>
 </div>

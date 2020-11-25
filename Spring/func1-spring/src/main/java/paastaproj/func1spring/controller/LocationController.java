@@ -63,7 +63,7 @@ public class LocationController {
         //Directions로 경로 리스트 받아오기
         try {
             path_arr = locationService.sendGet("https://naveropenapi.apigw.ntruss.com/map-direction/v1/driving?start="
-                    + lng_src + "," + lat_src + "&goal=" + lng_dest + "," + lat_dest + "&option=trafast");
+                    + lng_src + "," + lat_src + + "|" +"&goal=" + lng_dest + "," + lat_dest + "&option=trafast");
         }catch (Exception e) {
             e.printStackTrace();
         }
