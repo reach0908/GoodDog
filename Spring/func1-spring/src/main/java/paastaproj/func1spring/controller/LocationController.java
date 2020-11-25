@@ -53,6 +53,19 @@ public class LocationController {
         //System.out.println(lat_src);
         String lng_src = locations.get(0).getLongitude();
         //System.out.println(lng_src);
+        String way_point = "";
+        for (int i=1;i<locations.size()-1;i++){
+            String lat = locations.get(i).getLatitude();
+            String lng = locations.get(i).getLongitude();
+            way_point += lng;
+            way_point += ",";
+            way_point += lat;
+            if(i!=locations.size()-2){
+                way_point += ":";
+            }
+
+        }
+        //System.out.println(lng_src);
         String lat_dest = locations.get(locations.size()-1).getLatitude();
         //System.out.println(lat_dest);
         String lng_dest = locations.get(locations.size()-1).getLongitude();
@@ -63,7 +76,7 @@ public class LocationController {
         //Directions로 경로 리스트 받아오기
         try {
             path_arr = locationService.sendGet("https://naveropenapi.apigw.ntruss.com/map-direction/v1/driving?start="
-                    + lng_src + "," + lat_src + + "|" +"&goal=" + lng_dest + "," + lat_dest + "&option=trafast");
+                    + lng_src + "," + lat_src + "&waypoints=" + way_point +"&goal=" + lng_dest + "," + lat_dest + "&option=trafast");
         }catch (Exception e) {
             e.printStackTrace();
         }
