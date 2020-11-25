@@ -452,6 +452,6 @@ out/
 .vscode/
 
 ### Api Key ###
-!**/src/main/java/**/ApiKey.java
+ApiKey.java
 
 # End of https://www.toptal.com/developers/gitignore/api/react,reactnative,intellij
