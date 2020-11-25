@@ -12,10 +12,15 @@
     <script th:inline="javascript">
     var polylinePath = new Array();
     /*<![CDATA[*/
-	var polylinePath = "[[${locations}]]";
+
+	/*[# th:each="location : ${locations}"]*/
+	save(/*[[${location.Latitude}]]*/,/*[[${location.Longitude}]]*/);
+	/*[/]*/
 	/*]]>*/
 
-    console.log(polylinePath[0]);
+    function save(latitude,longitude){
+        polylinePath.push(new naver.maps.LatLng(latitude,longitude));
+    }
 </script>
 
     <script>
@@ -34,6 +39,8 @@ var map = new naver.maps.Map('map', mapOptions);
 		strokeWeight : 6, //선 두께
 		map : map
 	});
+
+
 
 </script>
 </div>

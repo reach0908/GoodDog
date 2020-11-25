@@ -45,8 +45,10 @@ public class LocationController {
 
     @GetMapping("/maps")
     public String map(Model model){
+
         List<Location> locations = locationService.showAll();
 
+        //경로 출발 및 목적지 설정
         String lat_src = locations.get(0).getLatitude();
         //System.out.println(lat_src);
         String lng_src = locations.get(0).getLongitude();
@@ -56,17 +58,21 @@ public class LocationController {
         String lng_dest = locations.get(locations.size()-1).getLongitude();
         //System.out.println(lng_dest);
 
-        String[] path_arr = null;
+        List<Location> path_arr = new LinkedList<>();
 
+        //Directions로 경로 리스트 받아오기
         try {
             path_arr = locationService.sendGet("https://naveropenapi.apigw.ntruss.com/map-direction/v1/driving?start="
                     + lng_src + "," + lat_src + "&goal=" + lng_dest + "," + lat_dest + "&option=trafast");
         }catch (Exception e) {
             e.printStackTrace();
         }
-
+        //경로 전달
         model.addAttribute("locations",path_arr);
-
+        //내가 들린 포인트 전달
+        model.addAttribute("myloca",locations);
+        //확진자 포인트 전달
+        //model.addAttribute("")
         return "locations/map";
     }
 

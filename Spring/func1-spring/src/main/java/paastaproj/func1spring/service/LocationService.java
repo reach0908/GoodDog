@@ -1,5 +1,6 @@
 package paastaproj.func1spring.service;
 
+import paastaproj.func1spring.ApiKey;
 import paastaproj.func1spring.domain.Location;
 import paastaproj.func1spring.repositories.LocationRepository;
 
@@ -18,8 +19,8 @@ public class LocationService {
 
     private final LocationRepository locationRepository;
     //네이버지도 api key
-    private final String CLIENT_ID = "fgocun0nnd";
-    private final String CLIENT_SECRET = "LbLMWclRbYsdiUvMc7Mjjp86bbi2DLNz6cZgzNyI";
+    private final String CLIENT_ID = ApiKey.NaverID;
+    private final String CLIENT_SECRET = ApiKey.NaverSecret;
 
     public LocationService(LocationRepository locationRepository){
         this.locationRepository = locationRepository;
@@ -38,7 +39,7 @@ public class LocationService {
     }
 
     //directions 이용하기
-    public String[] sendGet(String targetURL) throws Exception{
+    public List<Location> sendGet(String targetURL) throws Exception{
 
         URL url = new URL(targetURL);
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
@@ -70,21 +71,19 @@ public class LocationService {
         Object[] arr_path = parse_path.toArray();
         System.out.println(arr_path[0]);
         // 경도,위도값 path_list에 담아주기
+        List<Location> locationList = new LinkedList<>();
         List<String> path_list = new LinkedList<>();
         for (int i = 0; i < arr_path.length; i++) {
+            Location temp = new Location();
             String lat;
             String lng;
-            String str = "";
             String path[] = arr_path[i].toString().split(",");
             lat = path[1].substring(0, path[1].length()-1);
             lng = path[0].substring(1, path[0].length());
-            str = str.concat(lat);
-            str = str.concat(",");
-            str = str.concat(lng);
-            path_list.add(str);
-            System.out.println(str);
+            temp.setLatitude(lat);
+            temp.setLongitude(lng);
+            locationList.add(temp);
         }
-        String[] path_arr = path_list.toArray(new String[path_list.size()]);
-        return path_arr;
+        return locationList;
     }
 }
