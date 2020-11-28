@@ -1,6 +1,21 @@
 import React from 'react';
 import '../../App.css'
+import Footer from '../Footer';
+import MapCard from '../MapCard';
+import CovidState from '../CovidState';
+import MapSlider from '../MapSlider';
 
-export default function MyPage(){
-    return <h1 className='mypage'>My Page</h1>;
+
+function Home (){
+
+    return(
+        <>
+            <MapSlider></MapSlider>
+            <MapCard></MapCard>
+            <CovidState></CovidState>
+            <Footer></Footer>
+        </>
+    );
 }
+
+export default Home;

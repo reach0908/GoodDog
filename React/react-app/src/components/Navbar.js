@@ -32,31 +32,31 @@ function Navbar() {
                         <img className="logo-image" src={LogoImage} alt="Logo_image"/>
                    </Link>
                    <div className="menu-icon" onClick={handleClick}>
-                       <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>
+                   <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>
                    </div>
                    <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                        <li className='nav-item'>
                         <Link to='/qrcheckin' className='nav-links' onClick={closeMobileMenu}>
-                            QR코드 체크인
+                            QR Check-in
                         </Link>
                        </li>
                        <li className='nav-item'>
                         <Link to='/mypage' className='nav-links' onClick={closeMobileMenu}>
-                            마이페이지
+                            My Page
                         </Link>
                        </li>
                        <li className='nav-item'>
                         <Link to='/selfcheck' className='nav-links' onClick={closeMobileMenu}>
-                            자가진단
+                            Self-Check
                         </Link>
                        </li>
                        <li className='nav-item'>
                         <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu}>
-                            회원가입
+                            SIGN-UP
                         </Link>
                        </li>
                    </ul>
-                   {button && <Button buttonStyle='btn--outline'>회원가입</Button>}
+                   {button && <Button buttonStyle='btn--outline'>SIGN-UP</Button>}
                 </div>
             </nav>
         </>

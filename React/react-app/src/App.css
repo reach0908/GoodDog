@@ -59,3 +59,14 @@
     color: #fff;
     font-size: 100px;
   }
+  .qrcheckin .mypagebtn{
+    text-align: center;
+  }
+  .aboutus {
+    background-image: url('components/images/img-7.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 100px;
+  }

@@ -8,6 +8,7 @@ import SelfCheck from './components/pages/SelfCheck';
 import SignUp from './components/pages/SignUp';
 import Login from './components/pages/Login';
 import QrCheckIn from './components/pages/QrCheckIn';
+import AboutUs from './components/pages/AboutUs'
 
 function App() {
   
@@ -22,6 +23,7 @@ function App() {
           <Route path='/selfcheck' component={SelfCheck} />
           <Route path='/sign-up' component={SignUp} />
           <Route path='/login' component={Login} />
+          <Route path='/aboutus' component={AboutUs} />
         </Switch>
       </Router>
     </>
