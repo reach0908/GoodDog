@@ -1,4 +1,5 @@
-* {
+
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -6,8 +7,8 @@
   }
   
   .home,
-  .services,
-  .products,
+  .mypage,
+  .selfcheck,
   .sign-up {
     display: flex;
     height: 90vh;
@@ -16,7 +17,7 @@
     font-size: 3rem;
   }
   
-  .services {
+  .mypage {
     background-image: url('components/images/img-2.jpg');
     background-position: center;
     background-size: cover;
@@ -25,7 +26,7 @@
     font-size: 100px;
   }
   
-  .products {
+  .selfcheck {
     background-image: url('components/images/img-1.jpg');
     background-position: center;
     background-size: fill;
@@ -36,6 +37,22 @@
   
   .sign-up {
     background-image: url('components/images/img-8.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 100px;
+  }
+  .login {
+    background-image: url('components/images/img-4.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 100px;
+  }
+  .qrcheckin {
+    background-image: url('components/images/img-6.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.css';
 import { Button } from './Button';
+import {LoginButton} from './LoginButton';
 import './HeroSection.css';
 
 function HeroSection() {
@@ -10,9 +11,9 @@ function HeroSection() {
             <p>QR코드를 체크하면서 자신의 이동경로를 기록하고</p>
             <p>코로나 격상상태에 따른 자가진단을 해보세요!</p>
             <div className="hero-btns">
-                <Button className='btns' buttonStyle='btn--outline'buttonSize='btn--large'>
+                <LoginButton className='btnsLogin' buttonStyle='btn--outline'buttonSize='btn--large'>
                     로그인
-                </Button>
+                </LoginButton>
                 <Button className='btns' buttonStyle='btn--primary'buttonSize='btn--large'>
                     회원 가입
                 </Button>

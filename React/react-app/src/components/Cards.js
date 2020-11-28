@@ -10,7 +10,7 @@ import sampleImages5 from  './images/img-5.jpg'
 function Cards() {
   return (
     <div className='cards'>
-      <h1>Check out these EPIC Destinations!</h1>
+      <h1>나는여기의 활용법을 구경해 보세요!</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
           <ul className='cards__items'>
@@ -18,13 +18,13 @@ function Cards() {
               src={sampleImages1}
               text='Explore the hidden waterfall deep inside the Amazon Jungle'
               label='Adventure'
-              path='/services'
+              path='/sign-up'
             />
             <CardItem
               src={sampleImages2}
               text='Travel through the Islands of Bali in a Private Cruise'
               label='Luxury'
-              path='/services'
+              path='/sign-up'
             />
           </ul>
           <ul className='cards__items'>
@@ -32,13 +32,13 @@ function Cards() {
               src={sampleImages3}
               text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
               label='Mystery'
-              path='/services'
+              path='/sign-up'
             />
             <CardItem
               src={sampleImages4}
               text='Experience Football on Top of the Himilayan Mountains'
               label='Adventure'
-              path='/products'
+              path='/sign-up'
             />
             <CardItem
               src={sampleImages5}

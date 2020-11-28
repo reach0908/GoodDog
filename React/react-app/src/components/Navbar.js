@@ -28,21 +28,21 @@ function Navbar() {
         <>
             <nav className="navbar">
                 <div className="navbar-container">
-                   <Link to="/" className="navber-logo" onClick={closeMobileMenu}>
-                        <img className="logo-image" src={LogoImage} alt="Logo image"/>
+                   <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+                        <img className="logo-image" src={LogoImage} alt="Logo_image"/>
                    </Link>
                    <div className="menu-icon" onClick={handleClick}>
                        <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>
                    </div>
                    <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                        <li className='nav-item'>
-                        <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                            홈페이지
+                        <Link to='/qrcheckin' className='nav-links' onClick={closeMobileMenu}>
+                            QR코드 체크인
                         </Link>
                        </li>
                        <li className='nav-item'>
-                        <Link to='/covidstatus' className='nav-links' onClick={closeMobileMenu}>
-                            코로나 현황
+                        <Link to='/mypage' className='nav-links' onClick={closeMobileMenu}>
+                            마이페이지
                         </Link>
                        </li>
                        <li className='nav-item'>
