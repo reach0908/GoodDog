@@ -15,6 +15,7 @@ import java.net.URL;
 import java.util.LinkedList;
 import java.util.List;
 
+
 public class LocationService {
 
     private final LocationRepository locationRepository;
