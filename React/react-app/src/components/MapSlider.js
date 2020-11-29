@@ -1,9 +1,21 @@
 import React, {useState} from 'react'
+import MapCard from './MapCard';
+import MapCard2 from './MapCard2';
+import MapCard3 from './MapCard3';
 import './MapSlider.css'
-function MapSlider() {
 
-    let sliderArr = [1,2,3]
+
+
+function MapSlider() {
+    
+    var sliderArr = [
+        <MapCard/>,
+        <MapCard2/>,
+        <MapCard3/>
+    ]
+
     const [x,setX] = useState(0);
+
     const goLeft =()=>{
         console.log(x);
         x === 0 ? setX(-100*(sliderArr.length-1)) : setX(x+100);
@@ -12,6 +24,7 @@ function MapSlider() {
         console.log(x);
         x === -100*(sliderArr.length-1) ? setX(0) : setX(x-100);
     };
+
     return (
         <div className='slider'>
             {sliderArr.map((item,index)=>{

@@ -11,7 +11,6 @@ function Home (){
     return(
         <>
             <MapSlider></MapSlider>
-            <MapCard></MapCard>
             <CovidState></CovidState>
             <Footer></Footer>
         </>
