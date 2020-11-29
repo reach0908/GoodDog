@@ -4,6 +4,7 @@ import {RenderAfterNavermapsLoaded, NaverMap, Marker} from 'react-naver-maps';
 
 function NaverMapAPI() {
   const navermaps = window.naver.maps;
+  
   return (
     <NaverMap
       id="map1"// default: react-naver-map

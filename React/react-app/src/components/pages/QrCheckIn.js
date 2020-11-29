@@ -2,8 +2,9 @@ import React from 'react';
 import '../../App.css'
 import '../Cards.css';
 import CardItem from '../CardItem';
-import sampleImages1 from  '../images/img-1.jpg'
-import sampleImages2 from  '../images/img-2.jpg'
+import naverImage from  '../images/naver.png'
+import kakaoImage from  '../images/kakao.jpg'
+import naverMap from '../images/navermap.png'
 import MyPageCard from '../MyPageCard';
 
 function QrCheckIn() {
@@ -14,13 +15,13 @@ function QrCheckIn() {
           <div className='cards__wrapper'>
             <ul className='cards__items'>
               <CardItem
-                src={sampleImages1}
+                src={naverImage}
                 text='네이버 QR코드로 체크인하세요.'
                 label='Naver'
                 path='/naverqrcheckin'
               />
               <CardItem
-                src={sampleImages2}
+                src={kakaoImage}
                 text='카카오 QR코드로 체크인하세요.'
                 label='kakao'
                 path='/kakaoqrcheckin'
@@ -31,7 +32,7 @@ function QrCheckIn() {
             </h2>
             <ul className='cards__items'>
               <MyPageCard
-                src={sampleImages1}
+                src={naverMap}
                 text='내 이동경로를 확인하세요'
                 label='MyPage'
                 path='/mypage'

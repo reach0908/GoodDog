@@ -1,7 +1,6 @@
 import React from 'react';
 import '../../App.css'
 import Footer from '../Footer';
-import MapCard from '../MapCard';
 import CovidState from '../CovidState';
 import MapSlider from '../MapSlider';
 
