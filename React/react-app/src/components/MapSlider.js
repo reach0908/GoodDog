@@ -34,8 +34,12 @@ function MapSlider() {
                     </div>
                 );
             })}
-            <button id="goLeft" onClick={goLeft}>left</button>
-            <button id="goRight" onClick={goRight}>right</button>
+            <button id="goLeft" onClick={goLeft}>
+                <i class="fas fa-chevron-left"/>
+            </button>
+            <button id="goRight" onClick={goRight}>
+                <i class="fas fa-chevron-right"/>
+            </button>
         </div>
     );
 }
