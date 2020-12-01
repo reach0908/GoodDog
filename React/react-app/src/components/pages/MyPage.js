@@ -6,7 +6,6 @@ import MapSlider from '../MapSlider';
 
 
 function Home (){
-
     return(
         <>
             <MapSlider></MapSlider>

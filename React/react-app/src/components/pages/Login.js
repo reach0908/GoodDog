@@ -1,6 +1,12 @@
-import React from 'react';
-import '../../App.css'
+import React from 'react'
+import LoginCard from '../LoginCard'
 
-export default function Login(){
-    return <h1 className='login'>Login</h1>;
+function Login() {
+    return (
+        <div>
+            <LoginCard/>
+        </div>
+    )
 }
+
+export default Login

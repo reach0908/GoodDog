@@ -1,6 +1,14 @@
-import React from 'react';
-import '../../App.css'
+import React from 'react'
+import SignUpCard from '../SignUpCard'
+import {Link} from 'react-router-dom';
 
-export default function SignUp(){
-    return <h1 className='sign-up'>SIGN_UP</h1>;
+function SignUp() {
+    return (
+        <div>
+            <SignUpCard>
+            </SignUpCard>
+        </div>
+    )
 }
+
+export default SignUp
