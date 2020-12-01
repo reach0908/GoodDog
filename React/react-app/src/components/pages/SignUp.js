@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../Footer'
 import SignUpCard from '../SignUpCard'
 
 function SignUp() {
@@ -6,6 +7,7 @@ function SignUp() {
         <div>
             <SignUpCard>
             </SignUpCard>
+            <Footer></Footer>
         </div>
     )
 }

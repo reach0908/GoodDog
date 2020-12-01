@@ -9,8 +9,7 @@ import SignUp from './components/pages/SignUp';
 import Login from './components/pages/Login';
 import QrCheckIn from './components/pages/QrCheckIn';
 import AboutUs from './components/pages/AboutUs'
-import KakaoLogin from './components/kakaologin'
-import KakaoSignup from './components/KakaoSignup';
+
 
 
 
@@ -30,8 +29,6 @@ function App() {
           <Route path='/sign-up' component={SignUp} />
           <Route path='/login' component={Login} />
           <Route path='/aboutus' component={AboutUs} />
-          <Route path='/kakaologin' component={KakaoLogin}/>
-          <Route path='/kakaosignup' component={KakaoSignup}/>
         </Switch>
       </Router>
     </>
