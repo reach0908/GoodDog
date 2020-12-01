@@ -26,6 +26,9 @@ function Footer() {
                         <h2>메뉴</h2>
                         <Link to='/aboutus'>1.asdasd</Link>
                         <Link to='/'>2.asdasd</Link>
+                        <a href='https://kauth.kakao.com/oauth/logout?client_id=a863152a6c9a88819b4482a0b970723a&logout_redirect_uri=http://localhost:8080/logout&response_type=code'>
+                        로그아웃하기
+                        </a>
                     </div>
                 </div>
             </div>
