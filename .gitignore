@@ -25,6 +25,10 @@
 .idea/**/uiDesigner.xml
 .idea/**/dbnavigator.xml
 
+
+#properties
+application-oauth.properties
+
 # Gradle
 .idea/**/gradle.xml
 .idea/**/libraries
